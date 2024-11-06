@@ -1,0 +1,73 @@
+### Create student-course
+POST localhost:8080/student-course
+Content-Type: application/json
+
+{
+  "studentId": 1,
+  "courseId": 3,
+  "mark": 5
+}
+
+
+### Update student-course
+PUT localhost:8080/student-course/3
+Content-Type: application/json
+
+{
+  "studentId": 6,
+  "courseId": 4,
+  "mark": 3
+}
+
+### Get all student-course
+GET localhost:8080/student-course
+
+
+### Get by id
+GET localhost:8080/student-course/2
+
+
+### Get student course detail
+GET localhost:8080/student-course/detail/2
+
+
+### Delete by id
+DELETE localhost:8080/student-course/1
+
+### Given student mark by date
+GET localhost:8080/student-course/given-date/8?date=2024-10-28
+
+
+### Given student mark by date
+GET localhost:8080/student-course/between-date/1?fromDate=2024-01-01&toDate=2024-12-12
+
+
+### Given student mark by date
+GET localhost:8080/student-course/student/1?fromDate=2024-01-01&toDate=2024-12-12
+
+
+### Given student mark by date
+GET localhost:8080/student-course/student/1/course/3
+
+
+### Given student mark by date
+GET localhost:8080/student-course/student/1/last
+
+
+### Given student mark by date
+GET localhost:8080/student-course/student/1/top3
+
+
+### Given student mark by date
+GET localhost:8080/student-course/student/1/firstMark
+
+### Given student mark by date
+GET localhost:8080/student-course/student/1/course/3/firstMark
+
+
+### Given student mark by date
+GET localhost:8080/student-course/course/3
+
+
+### Given student mark by date
+GET localhost:8080/student-course/by-id-detail/4

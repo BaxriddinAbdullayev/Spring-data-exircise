@@ -1,0 +1,75 @@
+### Create course
+POST localhost:8080/course
+Content-Type: application/json
+
+{
+  "name": "Android",
+  "price": 2200000,
+  "duration": 8
+}
+
+
+### Get all course
+GET localhost:8080/course
+
+
+### Get by id
+GET localhost:8080/course/5
+
+
+### Update course
+PUT localhost:8080/course/5
+Content-Type: application/json
+
+{
+  "name": "Rus tili",
+  "price": 300000,
+  "duration": 10
+}
+
+
+### Delete By id
+DELETE localhost:8080/course/5
+
+
+### Get by name
+GET localhost:8080/course/by-name?name=Java Backend
+
+
+### Get by price
+GET localhost:8080/course/by-price/1200000
+
+
+### Get by duration
+GET localhost:8080/course/by-duration?duration=12
+
+
+### Get by prices
+GET localhost:8080/course/between-price?from_price=500000&to_price=1000000
+
+
+### Get by created dates
+GET localhost:8080/course/between-date?from_date=2024-10-24&to_date=2024-10-27
+
+
+### Pagination get course by price between
+POST localhost:8080/course/between-price
+Content-Type: application/json
+
+{
+  "fromPrice": 500000,
+  "toPrice": 1000000
+}
+
+
+
+### ======================== PAGINATION FILTER ========================
+
+
+### Pagination filter
+POST localhost:8080/course/filter?page=1&size=3
+Content-Type: application/json
+
+{
+  "id": 1
+}

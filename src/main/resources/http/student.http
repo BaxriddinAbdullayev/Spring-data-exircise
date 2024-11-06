@@ -1,0 +1,104 @@
+### Create studnet
+POST localhost:8080/student
+Content-Type: application/json
+
+
+{
+  "name": "Sabohat",
+  "surname": "Qayyumova",
+  "level": 1,
+  "age": 21,
+  "gender": "FEMALE"
+}
+
+
+### Get all student
+GET localhost:8080/student
+
+
+### Get by id
+GET localhost:8080/student/5
+
+
+### Update student
+PUT localhost:8080/student/5
+Content-Type: application/json
+
+{
+  "name": "Faxriddin",
+  "surname": "Abdullayev",
+  "level": 4,
+  "age": 27,
+  "gender": "MALE"
+}
+
+
+### Delete by id
+DELETE localhost:8080/student/5
+
+
+### Get studnet list by name
+GET localhost:8080/student/by-name/Halima
+
+
+### Get studnet list by gender
+GET localhost:8080/student/by-gender/MALE
+
+
+### Get studnet list by given date
+GET localhost:8080/student/given-date?date=2024-10-26
+
+
+### Get studnet list by given dates
+GET localhost:8080/student/given-dates?fromDate=2024-10-25&toDate=2024-10-28
+
+
+### Get all student
+GET localhost:8080/student/age-18
+
+
+### Get all student
+GET localhost:8080/student/test
+
+
+### ======================== PAGINATION ========================
+
+
+### Pagination
+GET localhost:8080/student/pagination?page=1&size=3
+
+
+### Pagination by name
+POST localhost:8080/student/pagination?page=1&size=3
+Content-Type: application/json
+
+{
+  "name": "Ali"
+}
+
+
+### Pagination by name and age
+POST localhost:8080/student/pagination/query?page=1&size=3
+Content-Type: application/json
+
+{
+  "name": "Ali",
+  "age": 20
+}
+
+
+### Pagination by level
+GET localhost:8080/student/pagination/4?page=1&size=3
+
+
+### ======================== PAGINATION FILTER ========================
+
+
+### Pagination filter
+POST localhost:8080/student/filter?page=1&size=3
+Content-Type: application/json
+
+{
+  "createdDateFrom": "2024-10-26 ",
+  "createdDateTo": "2024-10-27"
+}
